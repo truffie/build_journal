@@ -30,14 +30,6 @@ export class AppConfigService {
     return this.getRequiredString('CORS_ORIGIN');
   }
 
-  getJournalMode(): string {
-    return this.configService.get<string>('JOURNAL_MODE', 'construction');
-  }
-
-  getInstanceName(): string {
-    return this.configService.get<string>('INSTANCE_NAME', 'Build Journal');
-  }
-
   getJwtSecret(): string {
     return this.getRequiredString('JWT_SECRET');
   }
